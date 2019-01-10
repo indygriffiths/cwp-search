@@ -35,7 +35,10 @@ class CwpSolrConfigStore implements SolrConfigStore
             $options['host'] . ':' . $options['port'],
             $config['path']
         ]);
-        $this->remote = $config['remotepath'];
+        
+        if (isset($options['remotepath']) {
+            $this->remote = $config['remotepath'];
+        }
     }
 
     /**
